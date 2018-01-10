@@ -9,16 +9,24 @@
   </head>
   <body>
     <div id="app">
-      {{ message }}
+      <ol>
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
     </div>
 
     <script>
       var app = new Vue({
         el: '#app',
         data: {
-          message: 'Hello Vue!'
+          todos: [
+            { text: 'Learn JavaScript' },
+            { text: 'Learn Vue' },
+            { text: 'Build something awesome' }
+          ]
         }
-      })
+      });
     </script>
   </body>
 </html>
